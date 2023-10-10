@@ -1,0 +1,64 @@
+version: "3"
+
+services:
+    nginx:
+        container_name: nginx
+        image: nginx
+        ports:
+            - "80:80"
+            - "443:443"
+        expose:
+            - 80
+            - 443
+        volumes:
+            - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+            - ./nginx/:/var/www/
+            - /etc/letsencrypt/archive/:/etc/nginx/certs/
+        depends_on:
+            - webserver-spring
+        networks:
+            - game-network
+
+    database-mysql:
+        container_name: database-mysql
+        image: mysql:8.0.34
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: 1234
+            MYSQL_DATABASE: onedb # create database
+            TZ: Asia/Seoul
+        ports:
+            - 3306:3306
+        expose:
+            - 3306
+            - --character-set-server=utf8mb4
+            - --collation-server=utf8mb4_unicode_ci
+        volumes:
+            # init sql
+            - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+        networks:
+            - game-network
+
+    webserver-spring:
+        container_name: webserver-spring
+        # ports:
+        #     - 5000:5000
+        expose:
+            - 5000
+        build:
+            context: ./spring
+            dockerfile: Dockerfile
+        restart: always
+        environment:
+            SPRING_DATASOURCE_URL: jdbc:mysql://database-mysql:3306/onedb?autoReconnect=true&serverTimezone=Asia/Seoul&useUnicode=true&characterEncoding=utf8
+            SPRING_DATASOURCE_USERNAME: b101
+            SPRING_DATASOURCE_PASSWORD: fjdjf384ohtfea838oa
+        networks:
+            - game-network
+        depends_on:
+            # below container must be excuted faster than this
+            - database-mysql
+
+networks:
+    game-network:
+        driver: bridge
