@@ -41,25 +41,25 @@
 
 ### 게임 화면
 
-> **회원가입** <br> ![회원가입](Exec/ReadmeImg/회원가입.gif)
+ **회원가입** <br> ![회원가입](Exec/ReadmeImg/회원가입.gif)
 
-> **로그인** <br> ![로그인](Exec/ReadmeImg/로그인.gif)
+ **로그인** <br> ![로그인](Exec/ReadmeImg/로그인.gif)
 
-> **로비 방목록** <br> ![로비방목록](Exec/ReadmeImg/로비방목록.gif)
+ **로비 방목록** <br> ![로비방목록](Exec/ReadmeImg/로비방목록.gif)
 
-> **로비 랭킹목록** <br> ![로비랭킹목록](Exec/ReadmeImg/로비랭킹목록.gif)
+ **로비 랭킹목록** <br> ![로비랭킹목록](Exec/ReadmeImg/로비랭킹목록.gif)
 
-> **방 정보** <br> ![방정보](Exec/ReadmeImg/방정보.gif)
+ **방 정보** <br> ![방정보](Exec/ReadmeImg/방정보.gif)
 
-> **로딩 화면** <br> ![로딩화면](Exec/ReadmeImg/로딩화면.gif)
+ **로딩 화면** <br> ![로딩화면](Exec/ReadmeImg/로딩화면.gif)
 
-> **스테이지 화면** <br> ![스테이지화면](Exec/ReadmeImg/스테이지화면.gif)
+ **스테이지 화면** <br> ![스테이지화면](Exec/ReadmeImg/스테이지화면.gif)
 
-> **보스 스테이지 화면** <br> ![보스스테이지화면](Exec/ReadmeImg/보스스테이지화면.gif)
+ **보스 스테이지 화면** <br> ![보스스테이지화면](Exec/ReadmeImg/보스스테이지화면.gif)
 
-> **보스 섬멸 화면** <br> ![보스섬멸화면](Exec/ReadmeImg/보스섬멸화면.gif)
+ **보스 섬멸 화면** <br> ![보스섬멸화면](Exec/ReadmeImg/보스섬멸화면.gif)
 
-> **결과 화면** <br> ![결과화면](Exec/ReadmeImg/결과화면.gif)
+ **결과 화면** <br> ![결과화면](Exec/ReadmeImg/결과화면.gif)
 
 ## 3️⃣ **개발 환경**
 
